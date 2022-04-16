@@ -46,6 +46,7 @@ li {
     border: none;
     outline: none;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .resultContainer {
@@ -57,4 +58,14 @@ li {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+}
+
+.license {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    justify-self: flex-end;
+    margin: 10px;
+    padding: 10px;
 }

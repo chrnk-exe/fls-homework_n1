@@ -9,7 +9,6 @@ const storage = window.localStorage
 
 const MainContainer = ({inputWord, favoriteHandler, setFavorite}) => {
   const favoriteWords = useSelector(state => state.favorits.favoriteWords)
-  const info = useSelector(state => state.info.info)
   const word = useSelector(state => state.info.word)
   const license = useSelector(state => state.info.license)
   const meanings = useSelector(state => state.info.meanings)
@@ -32,16 +31,23 @@ const MainContainer = ({inputWord, favoriteHandler, setFavorite}) => {
             <h1>Word: {word}</h1>
             <div className={classes.wordMeanings}>
               <h3>Meanings</h3>
-              {meanings?.map((meaningItem, index) => <MeaningItem key={index} info={meaningItem}/>
+              {meanings.map((meaningItem, index) => <MeaningItem key={index} info={meaningItem}/>
                 )}
               <h3>Phonetics</h3>
-              {phonetics?.map((phoneticItem, index) => <PhoneticItem key={index} info={phoneticItem}/>)}
+              {phonetics.map((phoneticItem, index) => <PhoneticItem key={index} info={phoneticItem}/>)}
               <h3>Sources</h3>
               <ul>
-                {sources?.map((source, index) => <li key={index}><a href={source}>{source}</a></li>)}
+                {sources.map((source, index) => <li key={index}><a href={source}>{source}</a></li>)}
               </ul>
             </div>
           </div>}
+          {license 
+          ? <div className={classes.license}>
+              <p>License: {license.name}</p>
+              <a href={license.url}>{license.url}</a>
+          </div>
+          : null
+          }
       </section>
       <section className={classes.favorite}>
         <h2>Favorite</h2>

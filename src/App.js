@@ -19,19 +19,18 @@ function App() {
 
   useEffect(() => {
     dispatch(setWords(JSON.parse(storage.getItem('favoriteWords'))))
-  }, [])
+  }, [dispatch])
 
   const wordHandler = (arg) => {
     let currentWord = arg ? arg : word
     axios({
       url: 'https://api.dictionaryapi.dev/api/v2/entries/en/' + currentWord,
-      method: "GET"
+      method: "GET",
     })
     .then(res => {
       if(res.status === 200){
         dispatch(setData(res.data[0]))
       }
-      console.log(res.data[0])
     })
     .catch(error => {alert('Word not found'); console.log(error)})
   }
@@ -68,11 +67,11 @@ function App() {
       <div className={classes.main}>
         <div className={classes.wordContainer}>
           <h2>Type your word here and i'll tell you about it!</h2>
-          <div className={classes.inputContainer}>
+          <header className={classes.inputContainer}>
             <input type='text' placeholder='type your word here!' className={classes.myPerfectInput} value={word} onChange={inputHandler} onKeyDown={onEnterPress}/>
             <button onClick={() => wordHandler(word)} className={classes.myButton}>Check!</button>
             <span onClick={favoriteHandler}><img height={32} src={favorite ? isFavor : unFavor} alt=''/></span>
-          </div>
+          </header>
         </div>
         <MainContainer inputWord={word} favoriteHandler={inputFromFavoriteHandler} setFavorite={setFavorite}/>
       </div>

@@ -48,6 +48,18 @@
 .myButton {
   padding: 10px;
   margin-right: 10px;
+  background-color: lightblue;
+  border: 1px solid deepskyblue;
+  border-radius: 5px;
+  font-size: 1.1em;
+  font-weight: 700;
+  outline: none;
+  transition: all .2s ease-in-out;
+}
+
+.myButton:hover {
+  background-color: deepskyblue;
+  border: 1px solid lightblue;
 }
 
 .inputContainer {
