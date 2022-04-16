@@ -1,0 +1,60 @@
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    background-color: #FFFFF1;
+    height: 100%;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    width: 100%;
+}
+
+.favorite {
+    margin: 10px;
+    padding: 10px;
+    background-color: lightblue;
+    border-radius: 15px;
+    border: 1px solid gray;
+    width: 80%;
+    font-size: 1.1em;
+}
+
+.favorite h2 {
+    width: 95%;
+    text-align: left;
+}
+
+li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+}
+
+.wordMeanings {
+    text-align: left;
+}
+
+.deleteButton {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgb(255, 55, 55);
+    border: none;
+    outline: none;
+    margin-right: 10px;
+}
+
+.resultContainer {
+    height: 100%;
+    width: 100%;
+    padding: 5%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}

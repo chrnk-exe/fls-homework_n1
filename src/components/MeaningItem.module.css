@@ -1,0 +1,33 @@
+.MeaningItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 5px;
+    padding: 5px;
+    font-size: 1.1em;
+    /* border: 1px solid lightgoldenrodyellow; */
+    border-radius: 5px;
+    background-color: lightgray;
+}
+
+.definitions {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.DefinitionItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* background-color: grey; */
+    margin-block: 10px;
+    width: 100%;
+}
+
+.DefinitionItem p {
+    text-align: left;
+}
