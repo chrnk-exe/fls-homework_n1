@@ -13,10 +13,11 @@ ul {
 
 .favorite {
     margin: 10px;
-    padding: 10px;
-    background-color: lightblue;
+    padding: 20px;
+    background-color: #FFFFF1;
     border-radius: 15px;
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
+    box-shadow: 0 0px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     width: 80%;
     font-size: 1.1em;
 }

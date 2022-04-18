@@ -50,7 +50,7 @@ const MainContainer = ({inputWord, favoriteHandler, setFavorite}) => {
           }
       </section>
       <section className={classes.favorite}>
-        <h2>Favorite</h2>
+        <h2>Favorite words</h2>
         <ul>
           {favoriteWords
           ? favoriteWords.map((word, index) => {

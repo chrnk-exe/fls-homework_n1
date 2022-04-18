@@ -70,7 +70,7 @@ function App() {
           <header className={classes.inputContainer}>
             <input type='text' placeholder='type your word here!' className={classes.myPerfectInput} value={word} onChange={inputHandler} onKeyDown={onEnterPress}/>
             <button onClick={() => wordHandler(word)} className={classes.myButton}>Check!</button>
-            <span onClick={favoriteHandler}><img height={32} src={favorite ? isFavor : unFavor} alt=''/></span>
+            <span style={{cursor: 'pointer'}} onClick={favoriteHandler}><img height={32} src={favorite ? isFavor : unFavor} alt=''/></span>
           </header>
         </div>
         <MainContainer inputWord={word} favoriteHandler={inputFromFavoriteHandler} setFavorite={setFavorite}/>
